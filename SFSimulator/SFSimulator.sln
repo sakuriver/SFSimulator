@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SFSimulator", "SFSimulator.csproj", "{DCC10F17-41FC-48E1-BCD5-17A9F4493EA4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulatorLibrary", "..\..\..\SFWorldSimulator\SimulatorLibrary\SimulatorLibrary.csproj", "{F00C94CA-7C66-4FC6-BF02-6E5FC373575D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SFSimulatorLibrary", "..\..\..\SFWorldSimulator\SFSimulatorLibrary\SFSimulatorLibrary.csproj", "{C538186A-50D2-4816-B2D9-97100FBF984E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DCC10F17-41FC-48E1-BCD5-17A9F4493EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCC10F17-41FC-48E1-BCD5-17A9F4493EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCC10F17-41FC-48E1-BCD5-17A9F4493EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00C94CA-7C66-4FC6-BF02-6E5FC373575D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00C94CA-7C66-4FC6-BF02-6E5FC373575D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00C94CA-7C66-4FC6-BF02-6E5FC373575D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00C94CA-7C66-4FC6-BF02-6E5FC373575D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C538186A-50D2-4816-B2D9-97100FBF984E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C538186A-50D2-4816-B2D9-97100FBF984E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C538186A-50D2-4816-B2D9-97100FBF984E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C538186A-50D2-4816-B2D9-97100FBF984E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

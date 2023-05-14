@@ -24,8 +24,8 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SFWorldSimulator\SFSimulatorLibrary\SFSimulatorLibrary.csproj" />
-    <ProjectReference Include="..\SFWorldSimulator\SimulatorLibrary\SimulatorLibrary.csproj" />
+    <ProjectReference Include="..\..\..\SFWorldSimulator\SFSimulatorLibrary\SFSimulatorLibrary.csproj" />
+    <ProjectReference Include="..\..\..\SFWorldSimulator\SimulatorLibrary\SimulatorLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Content\File.xnb">
