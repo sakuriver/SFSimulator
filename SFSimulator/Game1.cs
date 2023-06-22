@@ -329,8 +329,9 @@ namespace SFWorldSimulator
             }
         }
 
+
         /// <summary>
-        /// Todo: 実際に弾が当たった時の表示を追記する。
+        /// メイン画面内での、更新処理
         /// </summary>
         private void UpdateFieldBattle()
         {
