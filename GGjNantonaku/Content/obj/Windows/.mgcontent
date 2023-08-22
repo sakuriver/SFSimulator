@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/maou_bgm_8bit27.mp3</File>
+    <File>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/maou_bgm_8bit29.mp3</File>
+    <File>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/maou_bgm_healing13.mp3</File>
+    <File>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/tp_title_ggj.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
