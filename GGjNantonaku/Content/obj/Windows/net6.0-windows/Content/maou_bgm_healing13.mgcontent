@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/maou_bgm_healing13.mp3</SourceFile>
+  <SourceTime>2023-08-20T14:38:54.15063+09:00</SourceTime>
+  <DestFile>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/bin/Windows/Content/maou_bgm_healing13.xnb</DestFile>
+  <DestTime>2023-08-20T14:56:07.9392645+09:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T20:44:56+09:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T20:44:56+09:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>D:/devellop/DigitalPortal/SpaJam/PublicRepository/SFSimulator/GGjNantonaku/Content/bin/Windows/Content/maou_bgm_healing13.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
