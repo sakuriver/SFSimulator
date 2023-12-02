@@ -15,107 +15,108 @@ namespace GGjNantonaku
     public class Game1 : Game
     {
         /// <summary>
-        /// ゲーム内で使う描画コンテキスト
+        /// Contents Display Object Context
         /// </summary>
         private GraphicsDeviceManager _graphics;
 
         /// <summary>
-        /// ゲームで表示するフォントオブジェクト
+        /// Game Display Font Data
         /// </summary>
         private SpriteBatch _spriteBatch;
 
         /// <summary>
-        /// タイトル画像
+        /// Game Title Texture
         /// </summary>
         private Texture2D texture;
 
         /// <summary>
-        /// キャラクター画像
+        /// Acrtion Game Player Character Texture
         /// </summary>
         private Texture2D characterTexture;
 
         /// <summary>
-        /// 敵画像
+        /// Action Game Enemy Texture
         /// </summary>
         private Texture2D enemyTexture;
 
         /// <summary>
-        /// 各種UI関連情報として利用する部分
+        /// OutGame Header Info Parameter Object
         /// </summary>
         private AppOutParam outParam;
 
         /// <summary>
-        /// プレイヤーの発射したときの弾情報
+        /// Player Action Bullets List
         /// </summary>
         private List<PlayerActionData> playerBulletDatas = new List<PlayerActionData>();
 
         /// <summary>
-        /// アニメーションカウンター処理
+        /// Animation Counter
         /// </summary>
         private int animCounter = 0;
 
-        // ゲームとしてビルドするときの画面サイズ
-
-        // 敵が出現するフレーム数
+        /// <summary>
+        /// Contents Action Scnene EnemyAppearFrame
+        /// </summary>
         private int EnemyAppearFrameNum = 100;
 
-        // 敵出現用フレームカウンター
+        /// <summary>
+        /// Player Action Scene Enemy Appear Counter
+        /// </summary>
         private int enemyAppearFrameCount = 0;
 
-        // ゲーム内の上部に表示するスコア情報
-        // 敵を倒したりボーナスを計算したいときはこの変数を書き換える
+        /// <summary>
+        /// game header display score value
+        /// example enemy action calculate bonus enemy complete 
+        /// </summary>
         private int gameScore;
 
         /// <summary>
-        /// ゲームの進行上のシーン情報
+        /// Contents Playing Now Scene.
         /// </summary>
         private GameSceneName gameNowScene;
 
         /// <summary>
-        /// プレイヤーのアクション用データ
+        /// GamePlayerActionData.
         /// </summary>
         private PlayerActionData playerData;
 
         /// <summary>
-        /// 敵情報
+        /// Enermy Action Data.
         /// </summary>
         private List<PlayerActionData> enemyShipDatas = new List<PlayerActionData>();
 
         /// <summary>
-        /// タイトルbgm
+        /// Game Title Scene Play BackGroundMusic.
         /// </summary>
         private Song titleBgmSound;
 
         /// <summary>
-        /// メインモードBGM
+        /// Game Action Scene BackGroundMusic.
         /// </summary>
         private Song mainBgmSound;
 
         /// <summary>
-        /// エンディングBGM
+        /// Game Ending Scene BackGroundMusic.
         /// </summary>
         private Song endingBgmSound;
 
         /// <summary>
-        /// 決定効果音
+        /// KeyBoard Decide Touch SoundEffect
         /// </summary>
         private SoundEffect decideSoundEffect;
 
         /// <summary>
-        /// 撃破時の効果音
+        /// Enemy Bom Sound Effect
         /// </summary>
         private SoundEffect bomSoundEffect;
 
         /// <summary>
-        /// ゲームクリア時の効果音
+        /// Game Clear Sound Effect
         /// </summary>
         private SoundEffect clearEffect;
 
-        // maou_bgm_8bit29
-
-
         /// <summary>
-        /// ゲーム実行時のコンストラクタ
+        /// Game Setup Construct
         /// </summary>
         public Game1()
         {
@@ -131,7 +132,7 @@ namespace GGjNantonaku
 
 
         /// <summary>
-        /// 初期化処理
+        /// Game Initialize
         /// </summary>
         protected override void Initialize()
         {
@@ -140,7 +141,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// Contentからの各種画像情報を読み込み
+        /// Contents Asset Load Functioin
         /// </summary>
         protected override void LoadContent()
         {
@@ -157,16 +158,16 @@ namespace GGjNantonaku
             clearEffect = Content.Load<SoundEffect>(".\\Sound\\maou_se_magical25");
             base.LoadContent();
 
-            // MediaPlayerをタイトルbgm再生
+            // MediaPlayer is Title BackGroundMusic Play
             MediaPlayer.IsRepeating = true;
 
             MediaPlayer.Play(titleBgmSound);
         }
 
         /// <summary>
-        /// ゲームのメインループで使っている時間部分
+        /// Game MainLoop Update Function
         /// </summary>
-        /// <param name="gameTime">更新時間情報</param>
+        /// <param name="gameTime">UpdateTimeInformation</param>
         protected override void Update(GameTime gameTime)
         {
             // アプリの終了判定確認を流す
@@ -181,9 +182,9 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// タイトル画面の遷移確認するか
+        /// TitleScneMove ConditionCheck
         /// </summary>
-        /// <returns>遷移確認をする場合はtrue</returns>
+        /// <returns>isGameTitleUpdate is True</returns>
         private bool isGameTitleUpdate()
         {
             return (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Enter)) &&
@@ -191,7 +192,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// ゲーム終了処理
+        /// Application Exit Check Function
         /// </summary>
         private void gameExit()
         {
@@ -200,7 +201,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// ゲームメインアップデート
+        /// Game Main Update Function
         /// </summary>
         private void gameMainUpdate()
         {
@@ -212,7 +213,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// ゲームエンディングアップデート処理
+        /// Game Ending Scene Update Function
         /// </summary>
         private void gameEndingModeUpdate()
         {
@@ -223,7 +224,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// ゲーム更新処理アップデート
+        /// Game Title Scene Update Function
         /// </summary>
         private void gameTitleUpdate()
         {
@@ -236,9 +237,9 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 描画処理
+        /// Display Draw Function
         /// </summary>
-        /// <param name="gameTime">更新時間情報</param>
+        /// <param name="gameTime">GameTimeInformation</param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
@@ -257,10 +258,8 @@ namespace GGjNantonaku
             base.Draw(gameTime);
         }
 
-
         /// <summary>
-        /// タイトル画面での表示周りを編集する関数
-        /// タイトルでの反転なども記述
+        /// Game Scene Title Draw
         /// </summary>
         private void GameTitleDraw()
         {
@@ -270,7 +269,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// エンディング画面での表示周りを編集する関数
+        /// Ending Scene Display Draw Function
         /// </summary>
         private void GameEndingDraw()
         {
@@ -282,9 +281,8 @@ namespace GGjNantonaku
             _spriteBatch.End();
         }
 
-
         /// <summary>
-        /// メイン画面でのキャラクター表示周りを編集する関数
+        /// Game Main Draw
         /// </summary>
         private void GameMainDraw()
         {
@@ -301,8 +299,8 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// メイン画面内での更新処理
-        /// キーボードなどでの入力関連を保持する
+        /// Game Main Scene Update Function
+        /// KeyBoard Input Check And Action
         /// </summary>
         private void GameMainUpdate()
         {
@@ -323,7 +321,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// キャラクターの移動ロジック用関数
+        /// Player Move Character
         /// </summary>
         private void playerMoveCharacter()
         {
@@ -352,7 +350,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 自機からの武器発射
+        /// Action Scene Player Game Character Shoot
         /// </summary>
         private void playerBulletShot()
         {
@@ -362,7 +360,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 自弾移動処理
+        /// Player Weapon Use After Action Function
         /// </summary>
         private void playerWeaponMove()
         {
@@ -378,7 +376,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// エンディングシーン内での遷移処理対応
+        /// Game Ending Scene Update
         /// </summary>
         private void GameEndingUpdate()
         {
@@ -393,7 +391,7 @@ namespace GGjNantonaku
 
 
         /// <summary>
-        /// メイン画面内での、更新処理
+        /// Field Information Update Function
         /// </summary>
         private void UpdateFieldBattle()
         {
@@ -428,7 +426,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// ゲームのエンディング条件を確認する
+        /// Update Game Scene Ending Timer Check
         /// </summary>
         private void updateCheckGameEnding()
         {
@@ -443,16 +441,16 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// エンディングへ移動する時の基準値を返却する
+        /// Getter Ending Scene Border Score Line
         /// </summary>
-        /// <returns>エンディング移動時のスコア基準値</returns>
+        /// <returns>Clear Ending Score</returns>
         private int getGameClearBorderScore()
         {
             return AppDefine.GameClearScore - 1;
         }
 
         /// <summary>
-        /// 敵出現処理
+        /// Action Scene Enemy Appear
         /// </summary>
         private void enemyFieldAppear()
         {
@@ -472,13 +470,13 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// アプリケーション側の当たり判定関数
+        /// Application Object Rect Hit Function
         /// </summary>
         /// <param name="basePosition">基本座標関連</param>
         /// <param name="baseTexture">当たり判定の範囲で利用する画像情報</param>
         /// <param name="targetPosition">基本座標関連</param>
         /// <param name="targetTexture">当たり判定の範囲で利用する画像情報</param>
-        /// <returns>当たっている場合はtrueを返す</returns>
+        /// <returns>is target and base hit true</returns>
         private bool isHit(Vector2 basePosition, Texture2D baseTexture, Vector2 targetPosition, Texture2D targetTexture)
         {
             return (basePosition.X <= targetPosition.X &&
@@ -488,7 +486,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 敵移動処理
+        /// Action Scene Enemy Move
         /// </summary>
         /// <param name="random">移動速度算出用オブジェクト</param>
         private void MoveEnemy(Random random)
@@ -538,7 +536,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 自キャラの描画処理
+        /// Player Character Draw Action Function
         /// </summary>
         private void MyCharacterDraw()
         {
@@ -553,7 +551,7 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 敵キャラ固有の描画表示の改修希望があれば移行して修正
+        /// PlayerAction Scene For Enemy Object Draw
         /// </summary>
         private void EnemyDraw()
         {
@@ -566,7 +564,7 @@ namespace GGjNantonaku
 
 
         /// <summary>
-        /// ゲーム中のUI情報を表示する
+        /// UI Header Display Draw Scene
         /// </summary>
         private void UIHeaderDraw()
         {
