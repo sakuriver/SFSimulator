@@ -170,7 +170,7 @@ namespace GGjNantonaku
         /// <param name="gameTime">UpdateTimeInformation</param>
         protected override void Update(GameTime gameTime)
         {
-            // アプリの終了判定確認を流す
+            // ApplicationExitConditionCheck
             gameExit();
             if (isGameTitleUpdate())
             {
@@ -289,11 +289,10 @@ namespace GGjNantonaku
             _spriteBatch.Begin();
 
 
-            // 描画専用処理が増えたらコメント解除して実装
             this.MyCharacterDraw();
             this.EnemyDraw();
 
-            // 画面の一番奥に表示されるUIを設定
+            // Display Ui Header Function
             this.UIHeaderDraw();
             _spriteBatch.End();
         }
@@ -306,7 +305,7 @@ namespace GGjNantonaku
         {
             playerMoveCharacter();
 
-            // チャタリングのバランス調整
+            // player action keyboard  chattering logic
             if (animCounter > 0)
             {
                 animCounter--;
@@ -396,10 +395,10 @@ namespace GGjNantonaku
         private void UpdateFieldBattle()
         {
 
-            // 敵出現処理を実装
+            // Field Enemy Appear Function
             enemyFieldAppear();
 
-            // 敵キャラ関係
+            // Enemy Player Item Logic Check
             for (int i = 0; i < enemyShipDatas.Count; i++)
             {
                 if (isHit(playerData.GetPosition(), characterTexture,
@@ -420,7 +419,7 @@ namespace GGjNantonaku
                 }
             }
 
-            // エンディング確認処理の呼び出し
+            // Game Ending Condition Check
             updateCheckGameEnding();
 
         }
@@ -430,7 +429,7 @@ namespace GGjNantonaku
         /// </summary>
         private void updateCheckGameEnding()
         {
-            // エンディングシーンへの条件を設定
+            // main Scene Clear Score Check
             if (gameScore > getGameClearBorderScore())
             {
                 clearEffect.Play();
@@ -457,7 +456,7 @@ namespace GGjNantonaku
             Random random = new Random();
             MoveEnemy(random);
 
-            // 出現処理
+            // EnemyAppear Append
             if (enemyAppearFrameCount >= EnemyAppearFrameNum)
             {
                 int yValue = random.Next(AppDefine.HardWareHeight);
@@ -472,33 +471,33 @@ namespace GGjNantonaku
         /// <summary>
         /// Application Object Rect Hit Function
         /// </summary>
-        /// <param name="basePosition">基本座標関連</param>
-        /// <param name="baseTexture">当たり判定の範囲で利用する画像情報</param>
-        /// <param name="targetPosition">基本座標関連</param>
-        /// <param name="targetTexture">当たり判定の範囲で利用する画像情報</param>
-        /// <returns>is target and base hit true</returns>
+        /// <param name="basePosition">basePositionData</param>
+        /// <param name="baseTexture">baseTexture</param>
+        /// <param name="targetPosition">targetPosition</param>
+        /// <param name="targetTexture">targetHitTextureData</param>
+        /// <returns>is target and base hit true Calc baseTargetPosition + baseTargetTexture targetPosition + targetTexture</returns>
         private bool isHit(Vector2 basePosition, Texture2D baseTexture, Vector2 targetPosition, Texture2D targetTexture)
         {
             return (basePosition.X <= targetPosition.X &&
                 targetPosition.X <= basePosition.X + baseTexture.Width &&
                 basePosition.Y <= targetPosition.Y &&
-                targetPosition.Y <= basePosition.Y + baseTexture.Width);
+                targetTexture.Height <= basePosition.Y + baseTexture.Width);
         }
 
         /// <summary>
         /// Action Scene Enemy Move
         /// </summary>
-        /// <param name="random">移動速度算出用オブジェクト</param>
+        /// <param name="random">moveCalcRandomObject</param>
         private void MoveEnemy(Random random)
         {
-            // 敵キャラ関係
+            // enemyShipLoop
             for (int i = 0; i < enemyShipDatas.Count; i++)
             {
-                // 敵を移動する
+                // EnemyMoveValueGetLogic
                 int yAddValue = calculateEnemyMoveSpeed(random);
                 int ySubValue = calculateEnemyMoveSpeed(random);
                 enemyShipDatas[i].AddPosition(0, yAddValue - ySubValue);
-                // 移動後に弾に接触しているかを確認する
+                // PlayerBulletHitCheckAction
                 for (int j = 0; j < playerBulletDatas.Count; j++)
                 {
                     if (isHit(playerBulletDatas[j].GetPosition(), characterTexture,
@@ -512,7 +511,7 @@ namespace GGjNantonaku
                             bomSoundEffect.Play(AppDefine.EnemySoundVolume, 0, 0);
                         }
                         gameScore += 10;
-                        // プレイヤー側の方がなくなった場合は、ループから抜ける
+                        // PlayerBulletEmptyLoopBreak
                         if (!playerBulletDatas[j].IsRunning())
                         {
                             playerBulletDatas.Remove(playerBulletDatas[j]);
@@ -526,10 +525,10 @@ namespace GGjNantonaku
         }
 
         /// <summary>
-        /// 敵の移動速度を算出
+        /// CalculateEnemyMoveSpeed
         /// </summary>
-        /// <param name="random">移動速度で利用する乱数生成器</param>
-        /// <returns>乱数移動速度結果</returns>
+        /// <param name="random">MoveSpeedRandomBaseObject</param>
+        /// <returns>RandomObject</returns>
         private int calculateEnemyMoveSpeed(Random random)
         {
             return random.Next(AppDefine.EnemyMaxSpeedNum);
@@ -540,7 +539,7 @@ namespace GGjNantonaku
         /// </summary>
         private void MyCharacterDraw()
         {
-            // 自キャラ関係の描画
+            // myCharacterDrawAction
             _spriteBatch.Draw(characterTexture, playerData.GetPosition(), Color.White);
 
             for (int i = 0; i < playerBulletDatas.Count; i++)
@@ -555,7 +554,7 @@ namespace GGjNantonaku
         /// </summary>
         private void EnemyDraw()
         {
-            // 敵キャラ関係
+            // EnemyShipCharacterData
             for (int i = 0; i < enemyShipDatas.Count; i++)
             {
                 _spriteBatch.Draw(enemyTexture, enemyShipDatas[i].GetPosition(), Color.White);
