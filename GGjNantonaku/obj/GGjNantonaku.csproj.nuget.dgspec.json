@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\devellop\\DigitalPortal\\SpaJam\\PublicRepository\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj": {}
+    "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFSimulator\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj": {}
   },
   "projects": {
-    "D:\\devellop\\DigitalPortal\\SpaJam\\PublicRepository\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj": {
+    "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFSimulator\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\devellop\\DigitalPortal\\SpaJam\\PublicRepository\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj",
+        "projectUniqueName": "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFSimulator\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj",
         "projectName": "GGjNantonaku",
-        "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\PublicRepository\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj",
+        "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFSimulator\\SFSimulator\\GGjNantonaku\\GGjNantonaku.csproj",
         "packagesPath": "C:\\Users\\SuzueKatsushige\\.nuget\\packages\\",
-        "outputPath": "D:\\devellop\\DigitalPortal\\SpaJam\\PublicRepository\\SFSimulator\\GGjNantonaku\\obj\\",
+        "outputPath": "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFSimulator\\SFSimulator\\GGjNantonaku\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj": {
-                "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj"
+              "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj": {
+                "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj"
               },
-              "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj": {
-                "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj"
+              "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj": {
+                "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\LocalizeProject\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj"
               }
             }
           }
@@ -78,126 +78,6 @@
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj",
-        "projectName": "SFSimulatorLibrary",
-        "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\SFSimulatorLibrary.csproj",
-        "packagesPath": "C:\\Users\\SuzueKatsushige\\.nuget\\packages\\",
-        "outputPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SFSimulatorLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\SuzueKatsushige\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj",
-        "projectName": "SimulatorLibrary",
-        "projectPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\SimulatorLibrary.csproj",
-        "packagesPath": "C:\\Users\\SuzueKatsushige\\.nuget\\packages\\",
-        "outputPath": "D:\\devellop\\DigitalPortal\\SpaJam\\SFWorldSimulator\\SimulatorLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\SuzueKatsushige\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
